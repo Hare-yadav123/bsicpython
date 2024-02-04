@@ -1,0 +1,5 @@
+a=int(input("enter number"))
+print("for additation 1")
+print("for subtraction 2")
+print("for multiplication 3")
+print("for  divid 4")
