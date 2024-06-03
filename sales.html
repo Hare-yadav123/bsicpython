@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Orders SPA</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body class="light">
+    <!-- Login Page -->
+    <div id="loginPage" class="page">
+        <div class="login">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="loginBtn">Login</button>
+        </div>
+    </div>
+
+    <!-- Main Page -->
+    <div id="mainPage" class="page hidden">
+        <div class="navbar">
+            <h1>Sale Orders</h1>
+            <div>
+                <button id="darkModeToggle">Toggle Dark Mode</button>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </div>
+        <div class="tabs">
+            <button data-tab="activeOrders">Active Orders</button>
+            <button data-tab="completedOrders">Completed Orders</button>
+        </div>
+        <div id="activeOrders" class="tab active">
+            <button id="addOrderBtn">+ Sale Order</button>
+            <table class="table" id="activeOrdersTable">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Details</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Order 1 details</td>
+                        <td><button class="editBtn">...</button></td>
+                    </tr>
+                    <!-- More rows as needed -->
+                </tbody>
+            </table>
+        </div>
+        <div id="completedOrders" class="tab">
+            <table class="table" id="completedOrdersTable">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Details</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td>Order 3 details</td>
+                        <td><button class="viewBtn">...</button></td>
+                    </tr>
+                    <!-- More rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Order Form</h2>
+            <form>
+                <input type="text" id="orderDetails" placeholder="Details">
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
